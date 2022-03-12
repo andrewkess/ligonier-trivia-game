@@ -20,21 +20,20 @@ const Results = (props) => {
     return (
 
 
-        <div>
+
+        <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-around p-10">
+            <p className="text-bold">You scored</p>
+            <p>{score} / {answers.length}</p>
 
 
 
-            <p>Current score: {score} / {answers.length}</p>
-            <br /><br />
-
-
-            <div className="text-xs">
+            <div className="text-xs ">
                 {results.map((result, index) => (
-                    <div key={`question_${index}`} className="flex" >
+                    <div key={`question_${index}`} className="flex border border-black" >
                         <div className="flex-none p-2">
                             {(result.answer === 'Correct') ?
-                                <AiFillCheckCircle className="text-green-500" />
-                                : <AiFillCloseCircle className="text-red-500" />}
+                                <AiFillCheckCircle className="text-green-500 text-2xl" />
+                                : <AiFillCloseCircle className="text-red-500 text-2xl" />}
                         </div>
                         <div className="flex-1 p-2">
                             {result.question}

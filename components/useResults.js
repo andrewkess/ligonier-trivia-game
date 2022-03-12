@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import cleanQuestion from "../components/helper";
 
 const useResults = (props) => {
-    const [score, setScore] = useState(0);
     const { answers, questions } = props;
+    const [score, setScore] = useState(0);
 
     //My code
 
@@ -18,6 +18,7 @@ const useResults = (props) => {
 
 
     useEffect(() => {
+
         // setLoading(true);
 
         for (let i = 0; i < answers.length; i++) {

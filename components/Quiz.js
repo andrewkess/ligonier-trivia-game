@@ -1,5 +1,6 @@
 import useQuiz from "./useQuiz";
 import Results from '../components/Results'
+import cleanQuestion from "../components/helper";
 
 
 const Quiz = () => {
@@ -10,15 +11,18 @@ const Quiz = () => {
 
     // console.log(questions[0].category)
 
-    if (curQuestion >= questions.length) return <Results />
+    if (curQuestion >= questions.length) return <Results answers={answers} questions={questions} />
 
 
     return (
         <div>
             <p className="font-bold">{questions[curQuestion].category}</p>
             <br />
-            <p>{questions[curQuestion].question.replace(/&quot;/g, '"').replace(/&#039;/g, `'`).replace(/&ocirc;/g, `ô`)}</p>
+            <p>{
 
+                cleanQuestion(questions[curQuestion].question)
+
+            }</p>
 
 
 
@@ -43,9 +47,6 @@ const Quiz = () => {
             <br />
             <p>{curQuestion + 1} of {questions.length}</p>
 
-
-            <p>Current answers: {answers.length}</p>
-            <br /><br />
 
 
 

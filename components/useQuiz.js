@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import numberWithCommas from "./helper";
+import cleanQuestion from "./helper";
 
 const useQuiz = () => {
-    const [count, setCount] = useState(9999);
+    // const [count, setCount] = useState(9999);
 
     //My code
 
@@ -43,7 +43,7 @@ const useQuiz = () => {
 
 
     return {
-        count: numberWithCommas(count),
+        // count: cleanQuestion(count),
         questions,
         answers,
         curQuestion,

@@ -1,7 +1,7 @@
 //import next.js link component
 import Link from 'next/link'
 //import business logic to grade quiz and return results
-import useResults from "./useResults";
+import useResults from "../hooks/useResults";
 //import icons
 import { AiOutlineClose, AiOutlineCheck } from 'react-icons/ai';
 

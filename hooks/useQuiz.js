@@ -8,9 +8,8 @@ const useQuiz = () => {
     const [curQuestion, setCurQuestion] = useState(0);
     const [isLoading, setLoading] = useState(false)
 
+    //function that adds "True" answer to the answer list
     const answerTrue = () => {
-
-        //adds "True" answer to the answer list
         //makes a shallow copy of existing answers, since you shouldn't directly modify an array in state
         setAnswers((answers) => [...answers, "True"])
 
@@ -18,15 +17,14 @@ const useQuiz = () => {
         setCurQuestion(++curQuestion);
     }
 
+    //function that adds "False" answer to the answer list
     const answerFalse = () => {
-        //adds "False" answer to the answer list
         //makes a shallow copy of existing answers, since you shouldn't directly modify an array in state
         setAnswers((answers) => [...answers, "False"])
 
         //increments curQuestion to proceed with the next question
         setCurQuestion(++curQuestion);
     }
-
 
     useEffect(() => {
         setLoading(true)

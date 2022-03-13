@@ -13,7 +13,7 @@ export default function Home() {
       <div className="flex flex-col items-center min-h-screen min-w-screen justify-evenly bg-gray-100">
 
 
-        <h1 className="text-3xl sm:text-5xl font-bold">
+        <h1 className="text-3xl sm:text-5xl font-bold font-proza">
           Welcome to the <br />Trivia Challenge!
         </h1>
         <p className="text-center text-xl max-w-[70vw] sm:max-w-[50vw]">
@@ -26,7 +26,7 @@ export default function Home() {
           <button
             type="button"
             className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center text-lg sm:text-xl"
-         >
+          >
             BEGIN
           </button>
         </Link>

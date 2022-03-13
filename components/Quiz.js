@@ -17,10 +17,10 @@ const Quiz = () => {
     return (
         <div className="flex flex-col items-center min-h-screen min-w-screen justify-evenly px-6 sm:px-16 bg-gray-100">
 
-            <p className="font-bold sm:text-lg md:text-xl">{questions[curQuestion].category}</p>
+            <p className="font-bold sm:text-lg md:text-xl font-proza">{questions[curQuestion].category}</p>
 
             <div className="border rounded-lg border-gray-400 px-8 sm:px-16 bg-white h-[55vh] sm:h-[55vh] w-full sm:w-[70vw]  flex flex-col  bg-gradient-to-r from-gray-200/10 to-gray-300/10" >
-                <div className="grow text-xl text-center sm:text-2xl flex flex-col justify-center">
+                <div className="grow text-xl text-center sm:text-2xl flex flex-col justify-center ">
                     {cleanQuestion(questions[curQuestion].question)}
                 </div>
 

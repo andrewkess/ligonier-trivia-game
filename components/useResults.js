@@ -33,14 +33,14 @@ const useResults = (props) => {
 
                 //adds answer result (correct, incorrect) and question to the results list
                 //makes a shallow copy of existing answers, since you shouldn't directly modify an array in state
-                setResults((results) => [...results, { answeredCorrectly: true, answerDesc: `This statement is ${questions[i].correct_answer}. You answered correctly.`, question: cleanQuestion(questions[i].question) }])
+                setResults((results) => [...results, { answeredCorrectly: true, answerDesc: `This statement is ${questions[i].correct_answer.toLowerCase()}. You answered correctly.`, question: cleanQuestion(questions[i].question) }])
 
 
 
             }
             else {
                 console.log('Incorrect answer');
-                setResults((results) => [...results, { answeredCorrectly: false, answerDesc: `This statement is ${questions[i].correct_answer}. You answered ${answers[i]}.`, question: cleanQuestion(questions[i].question) }])
+                setResults((results) => [...results, { answeredCorrectly: false, answerDesc: `This statement is ${questions[i].correct_answer.toLowerCase()}. You answered ${answers[i].toLowerCase()}.`, question: cleanQuestion(questions[i].question) }])
             }
 
         }

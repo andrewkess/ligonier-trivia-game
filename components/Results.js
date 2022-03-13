@@ -10,6 +10,8 @@ const Results = ({ answers, questions }) => {
   //useResults business logic is called, passing in answers and questions array as props from state
   const { score, results } = useResults({ answers, questions });
 
+  if (!results) return <p className="flex mx-auto text-center justify-center items-center min-h-screen text-1xl">Loading...</p>
+
   return (
     <div className="flex flex-col items-center bg-white justify-between p-5 sm:p-12 sm:text-xl">
  

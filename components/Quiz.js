@@ -7,10 +7,7 @@ const Quiz = () => {
     if (isLoading) return <p className="flex mx-auto text-center justify-center items-center min-h-screen bg-gray-100 text-1xl">Loading...</p>
     if (!questions) return <p>No profile data</p>
 
-    // console.log(questions[0].category)
-
     if (curQuestion >= questions.length) return <Results answers={answers} questions={questions} />
-    console.log(questions)
 
 
     return (

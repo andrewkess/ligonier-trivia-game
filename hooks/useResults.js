@@ -28,7 +28,7 @@ const useResults = ({ answers, questions }) => {
 
   return {
     score,
-    results
+    results,
   };
 };
 

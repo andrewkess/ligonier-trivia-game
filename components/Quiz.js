@@ -19,12 +19,12 @@ const Quiz = () => {
 
             <p className="font-bold sm:text-lg md:text-xl">{questions[curQuestion].category}</p>
 
-            <div className="border rounded-lg border-gray-400 px-8 sm:px-16 bg-white h-[70vh] sm:h-[55vh] w-full sm:w-[70vw] flex flex-col  bg-gradient-to-r from-gray-200/10 to-gray-300/10" >
+            <div className="border rounded-lg border-gray-400 px-8 sm:px-16 bg-white h-[55vh] sm:h-[55vh] w-full sm:w-[70vw]  flex flex-col  bg-gradient-to-r from-gray-200/10 to-gray-300/10" >
                 <div className="grow text-xl text-center sm:text-2xl flex flex-col justify-center">
                     {cleanQuestion(questions[curQuestion].question)}
                 </div>
 
-                <div className="flex flex-none justify-between mb-2 sm:mb-12">
+                <div className="flex flex-none justify-between mb-8 sm:mb-12">
                     <button
                         type="button"
                         className=" grow px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center text-lg sm:text-xl"

@@ -15,26 +15,27 @@ const Quiz = () => {
 
 
     return (
-        <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-around p-16 bg-gray-200">
+        <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-evenly px-16 bg-gray-100">
 
-            <div>
-                <p className="font-bold">{questions[curQuestion].category}</p>
-                <br />
-                <div className=" border border-black p-16 bg-white">
-             <div className="min-h-[30vh] w-full">   {cleanQuestion(questions[curQuestion].question)}</div>
-             <br />
+            <p className="font-bold text-lg">{questions[curQuestion].category}</p>
 
-                <div className="flex">
+            <div className=" border rounded-lg border-gray-400 p-16 bg-white h-[50vh] sm:w-[70vw] flex flex-col items-stretch">
+                <div className="grow text-xl flex flex-col justify-center">
+   {cleanQuestion(questions[curQuestion].question)}
+   </div>
+
+                <div className="flex justify-between">
                     <button
                         type="button"
-                        className=" grow inline-flex items-center px-4 py-2 mx-4 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none"
+                        className=" grow px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center"
                         onClick={answerTrue}
                     >
                         True
                     </button>
+                    <div className="flex-none w-14"></div>
                     <button
                         type="button"
-                        className="grow inline-flex items-center px-4 py-2 mx-4 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none"
+                        className="grow text-center items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
                         onClick={answerFalse}
                     >
                         False
@@ -42,19 +43,17 @@ const Quiz = () => {
 
                 </div>
 
-                </div>
-
-                <br />
-
-
-
-                <p className="text-center mx-4">{curQuestion + 1} of {questions.length}</p>
-
-
-
-
-
             </div>
+
+
+
+
+            <p className="text-center mx-4">{curQuestion + 1} of {questions.length}</p>
+
+
+
+
+
         </div>
     );
 };

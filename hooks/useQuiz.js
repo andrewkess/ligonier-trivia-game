@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
-import cleanQuestion from "./helper";
+import cleanQuestion from "../lib/helper";
 
 const useQuiz = () => {
-    // const [count, setCount] = useState(9999);
-
-    //My code
 
     const [questions, setQuestions] = useState([]);
     const [answers, setAnswers] = useState([]);
@@ -36,11 +33,15 @@ const useQuiz = () => {
         fetch('https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean')
             .then((res) => res.json())
             .then((data) => {
-                setQuestions(data.results)
 
+                // setQuestions(data.results)
 
-                // setQuestions((questions) => [...questions, { answer: "Correct", question: cleanQuestion(questions[i].question) }])
+                // {"category":"History","type":"boolean","difficulty":"hard","question":"The Kingdom of Prussia briefly held land in Estonia.","correct_answer":"False","incorrect_answers":["True"]}
 
+                // const tempQuestions = [];
+                data.results.map((question) => {
+                    setQuestions((questions) => [...questions, { category: question.category, question: cleanQuestion(question.question), correct_answer: question.correct_answer }])
+                })
 
                 setLoading(false)
             })
@@ -48,7 +49,6 @@ const useQuiz = () => {
 
 
     return {
-        // count: cleanQuestion(count),
         questions,
         answers,
         curQuestion,

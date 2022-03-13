@@ -1,10 +1,8 @@
-import useQuiz from "./useQuiz";
+import useQuiz from "../hooks/useQuiz";
 import Results from '../components/Results'
-import cleanQuestion from "../components/helper";
-
 
 const Quiz = () => {
-    const { count, questions, answers, curQuestion, isLoading, answerTrue, answerFalse } = useQuiz();
+    const { questions, answers, curQuestion, isLoading, answerTrue, answerFalse } = useQuiz();
 
     if (isLoading) return <p className="flex mx-auto text-center justify-center items-center min-h-screen bg-gray-100 text-1xl">Loading...</p>
     if (!questions) return <p>No profile data</p>
@@ -12,6 +10,7 @@ const Quiz = () => {
     // console.log(questions[0].category)
 
     if (curQuestion >= questions.length) return <Results answers={answers} questions={questions} />
+    console.log(questions)
 
 
     return (
@@ -21,7 +20,7 @@ const Quiz = () => {
 
             <div className="border rounded-lg border-gray-400 px-8 sm:px-16 bg-white h-[55vh] sm:h-[55vh] w-full sm:w-[70vw]  flex flex-col  bg-gradient-to-r from-gray-200/10 to-gray-300/10" >
                 <div className="grow text-xl text-center sm:text-2xl flex flex-col justify-center ">
-                    {cleanQuestion(questions[curQuestion].question)}
+                    {questions[curQuestion].question}
                 </div>
 
                 <div className="flex flex-none justify-between mb-8 sm:mb-12">

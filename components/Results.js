@@ -3,7 +3,7 @@ import useResults from "./useResults";
 
 import Link from 'next/link'
 // import cleanQuestion from "../components/helper";
-import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineCheck } from 'react-icons/ai';
 
 
 const Results = (props) => {
@@ -21,38 +21,42 @@ const Results = (props) => {
 
 
 
-        <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-around p-10">
-            <p className="text-bold">You scored</p>
-            <p>{score} / {answers.length}</p>
+        <div className="flex flex-col items-center bg-white justify-between p-2 sm:p-12">
+            <p className="font-bold mt-8">You scored</p>
+            <p className="font-bold mb-2">
+                {score} / {answers.length}
+            </p>
 
 
 
-            <div className="text-xs ">
+            <div className="text-sm bg-white">
                 {results.map((result, index) => (
-                    <div key={`question_${index}`} className="flex border border-black" >
-                        <div className="flex-none p-2">
-                            {(result.answer === 'Correct') ?
-                                <AiFillCheckCircle className="text-green-500 text-2xl" />
-                                : <AiFillCloseCircle className="text-red-500 text-2xl" />}
+                    <div key={`question_${index}`} className="flex items-center border-b-2 border-gray-200 py-2  min-w-screen" >
+                        <div className="flex-none">
+                            {(result.answeredCorrectly) ?
+                                <AiOutlineCheck className="text-green-700 text-2xl m-2" />
+                                : <AiOutlineClose className="text-red-900 text-2xl m-2" />}
                         </div>
-                        <div className="flex-1 p-2">
+                        <div className="m-2">
                             {result.question}
+                            <br />
+                           <div className="text-slate-500"> {result.answerDesc}</div>
                         </div>
                     </div>
                 ))}
             </div>
 
+            <div className="m-12">
+                <Link href="/" passHref>
+                    <button
+                        type="button"
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center text-lg sm:text-xl"
+                    >
+                        PLAY AGAIN?
+                    </button>
+                </Link>
 
-            <Link href="/" passHref>
-                <button
-                    type="button"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none"
-                >
-                    PLAY AGAIN?
-                </button>
-            </Link>
-
-
+            </div>
 
         </div>
     );

@@ -13,13 +13,13 @@ export default function Home() {
       <div className="flex flex-col items-center min-h-screen min-w-screen justify-evenly bg-gray-100">
 
 
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-3xl sm:text-5xl font-bold">
           Welcome to the <br />Trivia Challenge!
         </h1>
-        <p className="text-center text-lg max-w-[70vw] sm:max-w-[50vw]">
+        <p className="text-center text-xl max-w-[70vw] sm:max-w-[50vw]">
           You will be presented with 10 True or False questions.
         </p>
-        <p className="text-lg">
+        <p className="text-xl">
           Can you score 100%?
         </p>
         <Link href="/quiz" passHref>

@@ -6,7 +6,7 @@ import cleanQuestion from "../components/helper";
 const Quiz = () => {
     const { count, questions, answers, curQuestion, isLoading, answerTrue, answerFalse } = useQuiz();
 
-    if (isLoading) return <p>Loading...</p>
+    if (isLoading) return <p className="flex mx-auto text-center justify-center items-center min-h-screen bg-gray-100 text-1xl">Loading...</p>
     if (!questions) return <p>No profile data</p>
 
     // console.log(questions[0].category)
@@ -15,7 +15,7 @@ const Quiz = () => {
 
 
     return (
-        <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-evenly px-6 sm:px-16 bg-gray-100">
+        <div className="flex flex-col items-center min-h-screen min-w-screen justify-evenly px-6 sm:px-16 bg-gray-100">
 
             <p className="font-bold sm:text-lg md:text-xl">{questions[curQuestion].category}</p>
 

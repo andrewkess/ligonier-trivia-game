@@ -6,7 +6,7 @@ const useQuiz = () => {
 
     //My code
 
-    const [questions, setQuestions] = useState(null);
+    const [questions, setQuestions] = useState([]);
     const [answers, setAnswers] = useState([]);
     const [curQuestion, setCurQuestion] = useState(0);
     const [isLoading, setLoading] = useState(false)
@@ -37,6 +37,11 @@ const useQuiz = () => {
             .then((res) => res.json())
             .then((data) => {
                 setQuestions(data.results)
+
+
+                // setQuestions((questions) => [...questions, { answer: "Correct", question: cleanQuestion(questions[i].question) }])
+
+
                 setLoading(false)
             })
     }, [])

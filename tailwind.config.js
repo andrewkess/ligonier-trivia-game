@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'proza': ['"Proza Libre"', 'sans-serif'],
+      'yellowtail': ['"Yellowtail"', 'cursive'],
     },
     extend: {},
   },

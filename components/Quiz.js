@@ -26,7 +26,7 @@ const Quiz = () => {
                 <div className="flex flex-none justify-between mb-8 sm:mb-12">
                     <button
                         type="button"
-                        className=" grow px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center text-lg sm:text-xl"
+                        className=" grow px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600/80 hover:bg-blue-700 focus:outline-none text-center text-lg sm:text-xl"
                         onClick={answerTrue}
                     >
                         True
@@ -34,7 +34,7 @@ const Quiz = () => {
                     <div className="flex-none w-6 sm:w-14"></div>
                     <button
                         type="button"
-                        className="grow text-center items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-lg sm:text-xl"
+                        className="grow text-center items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600/80 hover:bg-blue-700 focus:outline-none text-lg sm:text-xl"
                         onClick={answerFalse}
                     >
                         False

@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 **Ligonier Trivia Game**
 
+Brief: 
+https://gist.github.com/DevanB/0a851886d6cc059e7a751b328917325c
+
 Specifications:
 
 - NextJS

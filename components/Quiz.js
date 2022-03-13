@@ -15,27 +15,27 @@ const Quiz = () => {
 
 
     return (
-        <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-evenly px-16 bg-gray-100">
+        <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-evenly px-6 sm:px-16 bg-gray-100">
 
-            <p className="font-bold text-lg">{questions[curQuestion].category}</p>
+            <p className="font-bold sm:text-lg md:text-xl">{questions[curQuestion].category}</p>
 
-            <div className=" border rounded-lg border-gray-400 p-16 bg-white h-[50vh] sm:w-[70vw] flex flex-col items-stretch">
-                <div className="grow text-xl flex flex-col justify-center">
-   {cleanQuestion(questions[curQuestion].question)}
-   </div>
+            <div className="border rounded-lg border-gray-400 px-8 sm:px-16 bg-white h-[70vh] sm:h-[55vh] w-full sm:w-[70vw] flex flex-col  bg-gradient-to-r from-gray-200/10 to-gray-300/10" >
+                <div className="grow text-xl text-center sm:text-2xl flex flex-col justify-center">
+                    {cleanQuestion(questions[curQuestion].question)}
+                </div>
 
-                <div className="flex justify-between">
+                <div className="flex flex-none justify-between mb-2 sm:mb-12">
                     <button
                         type="button"
-                        className=" grow px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center"
+                        className=" grow px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center text-lg sm:text-xl"
                         onClick={answerTrue}
                     >
                         True
                     </button>
-                    <div className="flex-none w-14"></div>
+                    <div className="flex-none w-6 sm:w-14"></div>
                     <button
                         type="button"
-                        className="grow text-center items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
+                        className="grow text-center items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-lg sm:text-xl"
                         onClick={answerFalse}
                     >
                         False

@@ -10,23 +10,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="flex flex-col items-center border border-black min-h-screen min-w-screen justify-evenly bg-gray-100">
+      <div className="flex flex-col items-center min-h-screen min-w-screen justify-evenly bg-gray-100">
 
 
         <h1 className="text-3xl font-bold">
           Welcome to the <br />Trivia Challenge!
         </h1>
-        <p className="text-center max-w-[50vw]">
+        <p className="text-center text-lg max-w-[70vw] sm:max-w-[50vw]">
           You will be presented with 10 True or False questions.
         </p>
-        <p>
+        <p className="text-lg">
           Can you score 100%?
         </p>
         <Link href="/quiz" passHref>
           <button
             type="button"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none"
-          >
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none text-center text-xl sm:text-xl"
+         >
             BEGIN
           </button>
         </Link>

@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). I included Tailwind CSS for responsive mobile design CSS styling.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). I included Tailwind CSS for responsive mobile design CSS styling, so that the app can be consumed on both desktop and mobile.
 
 **Ligonier Trivia Game**
 

@@ -1,4 +1,3 @@
-//import next.js link component
 import Link from 'next/link'
 //import business logic to grade quiz and return results
 import useResults from "../hooks/useResults";
@@ -23,7 +22,7 @@ const Results = ({ answers, questions }) => {
         {results.map((result, index) => (
           <div key={`question_${index}`} className="flex items-center border-b border-gray-200 py-1" >
             {/* if the current question was answered correctly, display a check icon, otherwise display a X icon */}
-            <div className="flex-none">{(result.answeredCorrectly) ? <AiOutlineCheck className="text-green-700/60 text-4xl font-bold m-4" /> : <AiOutlineClose className="text-red-900/60 text-4xl font-bold m-4" />}</div>
+            <div className="flex-none">{(result.answeredCorrectly) ? <AiOutlineCheck className="text-green-700/80 text-4xl font-bold m-4" /> : <AiOutlineClose className="text-red-900/60 text-4xl font-bold m-4" />}</div>
             <div className="m-6">{result.question}<br /><div className="text-slate-500"> {result.answerDesc}</div></div>
           </div>
         ))}

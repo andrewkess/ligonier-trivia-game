@@ -9,9 +9,9 @@ Specifications:
 
 - NextJS
 - TypeScript
-- Correct implementation of a state manager
-- Correct implementation of a navigation solution
-- Componentization
+- Correct implementation of a state manager (useState)
+- Correct implementation of a navigation solution (built-in page navigation)
+- Componentization (Quiz, Results components)
 - Communication in the repo and/or code
-- Best practices with API calls and data
-- Separation of concerns between business and UI logic
+- Best practices with API calls and data (fetch)
+- Separation of concerns between business and UI logic (business logic saved in hooks)

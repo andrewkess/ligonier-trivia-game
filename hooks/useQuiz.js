@@ -11,7 +11,7 @@ const useQuiz = () => {
   //save current question in state
   const [curQuestion, setCurQuestion] = useState(0);
   //track if component is still loading data
-  const [isLoading, setLoading] = useState(false)
+  const [isLoading, setLoading] = useState(true)
 
   //function that adds "True" answer to the answer list on "True" button click
   const answerTrue = () => {

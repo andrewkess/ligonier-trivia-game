@@ -8,6 +8,9 @@ const Quiz = () => {
   //if fetch is still loading data, display 'loading' div
   if (isLoading) return <p className="flex mx-auto text-center justify-center items-center min-h-screen bg-gray-100 text-1xl">Loading...</p>
 
+  if (!answers) return <p className="flex mx-auto text-center justify-center items-center min-h-screen bg-gray-100 text-1xl">Loading...</p>
+
+
   //if user has answered all questions, display Results component
   if (curQuestion >= questions.length) return <Results answers={answers} questions={questions} />
 

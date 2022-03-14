@@ -30,7 +30,7 @@ const useResults = ({ answers, questions }: Props) => {
       //if the user's provided answer is correct
       if (answers[i] === questions[i].correct_answer) {
         //increment score by one point
-        setScore(score + 1);
+        setScore((score) => ++score);
         //save result (answeredCorrectly, answerDesc, question) in results array
         setResults((results) => [...results, { answeredCorrectly: true, answerDesc: `This statement is ${questions[i].correct_answer.toLowerCase()}. You answered correctly.`, question: questions[i].question }])
       }

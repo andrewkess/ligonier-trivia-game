@@ -4,12 +4,12 @@ import cleanQuestion from "../lib/helper";
 
 const useQuiz = () => {
 
+  //define Typescript interfaces
   interface QuestionInterface {
     category: string, 
     question: string, 
     correct_answer: string 
   }
-
   interface InitialQuestionInterface {
     category: string,
     type: string,
@@ -27,26 +27,6 @@ const useQuiz = () => {
   const [curQuestion, setCurQuestion] = useState<number>(0);
   //track if component is still loading data
   const [isLoading, setLoading] = useState<boolean>(true)
-
-  // function useState<State>(initialState: State): [State, ...];
-  //function useState<S>(initialState: S | (() => S)): [S, ...];
-
-  // React.useEffect(() => {
-  //   setCurQuestion({
-  //     ...settings,
-  //     ...props.settings as number
-  //   })
-  // }, [props.settings])
-
-// interface Props{
-//   answers: string[];
-//   curQuestion: number;
-//   setAnswers: Dispatch<SetStateAction<string[]>>;
-//   setCurQuestion: Dispatch<SetStateAction<number>>;
-// }
-
-// const answerTrue = ({answers, curQuestion}: Props) => {
- 
 
   //function that adds "True" answer to the answer list on "True" button click
   const answerTrue = () => {

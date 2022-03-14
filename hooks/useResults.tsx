@@ -1,21 +1,20 @@
 import { useState, useEffect } from 'react';
 
-interface QuestionInterface {
-  category: string, 
-  question: string, 
-  correct_answer: string 
-}
-
-interface ResultsInterface {
-  answeredCorrectly: boolean, 
-  answerDesc: string, 
-  question: string 
-}
-
-interface Props{
-  answers: string[];
-  questions: QuestionInterface[];
- }
+  //define Typescript interfaces
+  interface QuestionInterface {
+    category: string, 
+    question: string, 
+    correct_answer: string 
+  }
+  interface ResultsInterface {
+    answeredCorrectly: boolean, 
+    answerDesc: string, 
+    question: string 
+  }
+  interface Props{
+    answers: string[];
+    questions: QuestionInterface[];
+   }
 
 // answers and questions arrays are passed as props from state
 const useResults = ({ answers, questions }: Props) => {

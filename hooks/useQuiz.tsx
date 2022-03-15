@@ -5,11 +5,6 @@ import cleanQuestion from "../lib/helper";
 const useQuiz = () => {
 
   //define Typescript interfaces
-  interface QuestionInterface {
-    category: string, 
-    question: string, 
-    correct_answer: string 
-  }
   interface InitialQuestionInterface {
     category: string,
     type: string,
@@ -17,6 +12,11 @@ const useQuiz = () => {
     question: string, 
     correct_answer: string,
     incorrect_answers: string[],
+  }
+  interface QuestionInterface {
+    category: string, 
+    question: string, 
+    correct_answer: string 
   }
 
   //save all questions in state

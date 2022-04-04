@@ -33,3 +33,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+.gitsecret/keys/random_seed
+!*.secret
+components/encrypted.js
